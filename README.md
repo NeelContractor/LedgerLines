@@ -1,5 +1,5 @@
 # 🎼 LedgerLines
 
-**LedgerLines** is a collaborative platform for musicians and composers to create, manage, and share sheet music and compositions with ease. Built for both solo artists and orchestras, it blends powerful notation tools with real-time collaboration and publishing features.
+**LedgerLines** is a decentralized journal entry platform built on **Solana**, enabling users to securely write, store, and optionally publish personal entries on-chain. By leveraging blockchain technology, LedgerLines ensures data integrity, censorship resistance, and user ownership.
 
-![LedgerLines Screenshot](./assets/screenshot.png)
+![LedgerLines Screenshot](./public/website.png)
