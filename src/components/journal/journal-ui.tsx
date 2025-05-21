@@ -77,9 +77,11 @@ function CreateJournalEntryButton() {
 
   const isFormValid = title.trim() !== "" && message.trim() !== "";
 
-  const handleOnCreate = () => {
+  const handleOnCreate = async () => {
     if (publicKey && isFormValid) {
-      createJournalEntry.mutateAsync({ title, message, owner: publicKey });
+      await createJournalEntry.mutateAsync({ title, message, owner: publicKey });
+      setTitle("")
+      setMessage("")
     }
   }
   
@@ -132,9 +134,10 @@ function UpdateJournalEntryButton({ account, entry }: { account: PublicKey, entr
 
   const isFormValid = entry.title.trim() !== "" && message.trim() !== "";
 
-  const handleOnUpdate = () => {
+  const handleOnUpdate = async () => {
     if (publicKey && isFormValid) {
-      updateJournalEntry.mutateAsync({ title: entry.title, message, owner: publicKey });
+      await updateJournalEntry.mutateAsync({ title: entry.title, message, owner: publicKey });
+      setMessage("");
     }
   }
   return <div>
